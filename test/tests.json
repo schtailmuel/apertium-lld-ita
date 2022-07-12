@@ -1,0 +1,10 @@
+{
+    "lld-ita": {
+        "input": "lld-ita-input.txt",
+        "mode": "lld-ita"
+    },
+    "ita-lld": {
+        "input": "ita-lld-input.txt",
+        "mode": "ita-lld"
+    }
+}
