@@ -34,6 +34,7 @@
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
+    <def-var n="caseFirstWord"/>
   </section-def-vars>
   <section-def-macros>
     <def-macro n="test" npar="1">
