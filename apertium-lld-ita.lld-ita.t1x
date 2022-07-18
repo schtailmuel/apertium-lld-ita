@@ -1,33 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transfer default="chunk">
   <section-def-cats>
-    <def-cat n="nom">
-      <cat-item tags="n.*"/>
-    </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
+    <def-cat n="det">
+      <cat-item tags="det.*"/>
+    </def-cat>
+    <def-cat n="noun">
+      <cat-item tags="n.*"/>
+    </def-cat>
   </section-def-cats>
-
   <section-def-attrs>
+    <def-attr n="type">
+      <attr-item tags="n"/>
+      <attr-item tags="adj"/>
+      <attr-item tags="det"/>
+    </def-attr>
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
     </def-attr>
+    <def-attr n="num">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+    </def-attr>
+    <def-attr n="gender">
+      <attr-item tags="m"/>
+      <attr-item tags="f"/>
+    </def-attr>
+    <def-attr n="det_attr">
+      <attr-item tags="det"/>
+    </def-attr>
   </section-def-attrs>
-
   <section-def-vars>
     <def-var n="number"/>
   </section-def-vars>
-
   <section-def-macros>
     <def-macro n="test" npar="1">
-          <let>
-            <var n="number"/>
-            <lit v=""/>
-          </let>
+      <let>
+        <var n="number"/>
+        <lit v=""/>
+      </let>
     </def-macro>
   </section-def-macros>
-
   <section-rules>
     <rule comment="REGLA: SENT">
       <pattern>
@@ -37,7 +52,9 @@
         <out>
           <chunk name="sent" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SENT"/></tag>
+              <tag>
+                <lit-tag v="SENT"/>
+              </tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -46,9 +63,36 @@
         </out>
       </action>
     </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="det"/>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="det" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="NOUNPHRASE"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="type"/>
+              <clip pos="1" side="tl" part="det_attr"/>
+              <clip pos="2" side="tl" part="gender"/>
+              <clip pos="2" side="tl" part="num"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
   </section-rules>
 </transfer>
-
 <!--
 Resources:
     https://wiki.apertium.org/wiki/Chunking:_A_full_example
@@ -57,4 +101,3 @@ Resources:
     https://wiki.apertium.org/wiki/A_long_introduction_to_transfer_rules
     https://wiki.apertium.org/wiki/Transfer#Adding_structural_transfer_.28grammar.29_rules
 -->
-
