@@ -10,6 +10,12 @@
     </match>
   </rule>
   -->
+  <rule>
+    <match lemma="ester" tags="vblex.*">
+      <select lemma="essere" tags="vbser.*"/>
+    </match>
+    <match tags="adj.*"/>
+  </rule>
 </rules>
 
 <!--
