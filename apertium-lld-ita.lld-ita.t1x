@@ -75,6 +75,8 @@
       <pattern>
         <pattern-item n="det"/>
         <pattern-item n="noun"/>
+        <pattern-item n="verb"/>
+        <pattern-item n="adjective"/>
       </pattern>
       <action>
         <out>
@@ -95,15 +97,25 @@
             <lu>
               <clip pos="2" side="tl" part="whole"/>
             </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="4" side="tl" part="lem"/>
+              <clip pos="4" side="tl" part="type"/>
+              <clip pos="2" side="tl" part="gender"/>
+              <clip pos="4" side="tl" part="num"/>
+            </lu>
           </chunk>
         </out>
       </action>
     </rule>
     <rule>
       <pattern>
+        <pattern-item n="det"/>
         <pattern-item n="noun"/>
-        <pattern-item n="verb"/>
-        <pattern-item n="adjective"/>
       </pattern>
       <action>
         <out>
@@ -114,17 +126,15 @@
               </tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="whole"/>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="type"/>
+              <clip pos="1" side="tl" part="det_attr"/>
+              <clip pos="2" side="tl" part="gender"/>
+              <clip pos="2" side="tl" part="num"/>
             </lu>
             <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
-            </lu>
-            <b/>
-            <lu>
-              <clip pos="3" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="gender"/>
-              <clip pos="3" side="tl" part="num"/>
             </lu>
           </chunk>
         </out>
