@@ -46,6 +46,20 @@ from source. If you installed any prerequisite language packages using a
 
 If any of this doesn't make sense or doesn't work, see https://wiki.apertium.org/wiki/Install_language_data_by_compiling
 
+Current results
+-------------------------------------------------------------------------------
+
+| Data                      | Direction   | BLEU   | Coverage |
+| ------------------------- | ----------- | ------ | -------- |
+| Curs (346 sent.)          | ita -> lld  |  18.51 | 81.25%   |
+|                           | lld -> ita  |  16.28 | 89.24%   |
+| Dizionar (19043 sent.)    | ita -> lld  |  13.87 | 80.83%   |
+|                           | lld -> ita  |  11.12 | 89.57%   |
+| Pinocchio (3127 sent.)    | ita -> lld  |  9.66  | 77.91%   |
+|                           | lld -> ita  |  7.90  | 86.87%   |
+| Ola é pa Max? (101 sent.) | ita -> lld  |  11.65 | 79.64%   |
+|                           | lld -> ita  |  8.66  | 87.47%   |
+
 Testing
 -------------------------------------------------------------------------------
 
@@ -53,10 +67,10 @@ If you are in the source directory after running make, the following
 commands should work:
 
 ```console
-$ echo "TODO test sentence 1" | apertium -d . lld-ita
-TODO test translated sentence 1
+$ echo "la usc é stancia" | apertium -d . lld-ita
+la #tono è stanca
 
-$ echo "TODO test sentence 2" | apertium -d . ita-lld
+$ echo "le pom é aje" | apertium -d . ita-lld
 TODO test translated sentence 2
 ```
 
