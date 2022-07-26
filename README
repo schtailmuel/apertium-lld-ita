@@ -46,20 +46,6 @@ from source. If you installed any prerequisite language packages using a
 
 If any of this doesn't make sense or doesn't work, see https://wiki.apertium.org/wiki/Install_language_data_by_compiling
 
-Current results
--------------------------------------------------------------------------------
-
-| Data                      | Direction   | BLEU   | Coverage |
-| ------------------------- | ----------- | ------ | -------- |
-| Curs (346 sent.)          | ita -> lld  |  18.51 | 81.25%   |
-|                           | lld -> ita  |  16.28 | 89.24%   |
-| Dizionar (19043 sent.)    | ita -> lld  |  13.87 | 80.83%   |
-|                           | lld -> ita  |  11.12 | 89.57%   |
-| Pinocchio (3127 sent.)    | ita -> lld  |  9.66  | 77.91%   |
-|                           | lld -> ita  |  7.90  | 86.87%   |
-| Ola é pa Max? (101 sent.) | ita -> lld  |  11.65 | 79.64%   |
-|                           | lld -> ita  |  8.66  | 87.47%   |
-
 Testing
 -------------------------------------------------------------------------------
 
@@ -80,6 +66,20 @@ After installing somewhere in `$PATH`, you should be able to do e.g.
 $ echo "TODO test sentence 1" | apertium lld-ita
 TODO test translated sentence 1
 ```
+
+Current results
+-------------------------------------------------------------------------------
+
+| Data                      | Direction   | BLEU   | Coverage |
+| ------------------------- | ----------- | ------ | -------- |
+| Curs (346 sent.)          | ita -> lld  |  18.51 | 81.25%   |
+|                           | lld -> ita  |  16.36 | 89.24%   |
+| Dizionar (19043 sent.)    | ita -> lld  |  13.87 | 80.83%   |
+|                           | lld -> ita  |  11.62 | 89.57%   |
+| Pinocchio (3127 sent.)    | ita -> lld  |  9.66  | 77.91%   |
+|                           | lld -> ita  |  8.11  | 86.87%   |
+| Ola é pa Max? (101 sent.) | ita -> lld  |  11.65 | 79.64%   |
+|                           | lld -> ita  |  8.63  | 87.47%   |
 
 Files and data
 -------------------------------------------------------------------------------
