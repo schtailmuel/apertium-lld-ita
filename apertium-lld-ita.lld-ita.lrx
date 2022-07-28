@@ -16,6 +16,24 @@
     </match>
     <match tags="adj.*"/>
   </rule>
+  <rule>
+    <match lemma="de">
+      <select lemma="de" tags="pr"/>
+    </match>
+    <match tags="n.*"/>
+  </rule>
+  <rule>
+    <match lemma="burt" tags="adj.*" />
+    <match lemma="tëmp">
+      <select lemma="tempo" tags="n.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="bel" tags="adj.*" />
+    <match lemma="tëmp">
+      <select lemma="tempo" tags="n.*"/>
+    </match>
+  </rule>
 </rules>
 
 <!--
