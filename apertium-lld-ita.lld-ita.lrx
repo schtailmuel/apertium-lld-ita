@@ -23,16 +23,34 @@
     <match tags="n.*"/>
   </rule>
   <rule>
-    <match lemma="burt" tags="adj.*" />
+    <match tags="adj.*" />
     <match lemma="tëmp">
       <select lemma="tempo" tags="n.*"/>
     </match>
   </rule>
   <rule>
-    <match lemma="bel" tags="adj.*" />
+    <match lemma="al">
+      <select lemma="lui" tags="prn.*"/>
+    </match>
+    <match lemma="se" tags="prn.*" />
+  </rule>
+  <rule>
     <match lemma="tëmp">
       <select lemma="tempo" tags="n.*"/>
     </match>
+    <match lemma="de" tags="pr.*" />
+  </rule>
+  <rule>
+    <match lemma="de" tags="pr">
+      <select lemma="di" tags="pr"/>
+    </match>
+    <match tags="n.*"/>
+  </rule>
+  <rule>
+    <match lemma="te" tags="pr">
+      <select lemma="in" tags="pr"/>
+    </match>
+    <match tags="adj.*" />
   </rule>
 </rules>
 
