@@ -14,6 +14,9 @@
       <cat-item tags="vblex.*"/>
       <cat-item tags="vbser.*"/>
     </def-cat>
+    <def-cat n="itg_verb">
+      <cat-item tags="vblex.*.itg.*"/>
+    </def-cat>
     <def-cat n="ne_adverb">
       <cat-item lemma="ne" tags="adv"/>
     </def-cat>
@@ -41,6 +44,7 @@
     <def-attr n="type">
       <attr-item tags="n"/>
       <attr-item tags="adj"/>
+      <attr-item tags="vblex"/>
       <attr-item tags="det"/>
     </def-attr>
     <def-attr n="a_cas">
@@ -48,6 +52,7 @@
     </def-attr>
     <def-attr n="num">
       <attr-item tags="sg"/>
+      <attr-item tags="sp"/>
       <attr-item tags="pl"/>
     </def-attr>
     <def-attr n="gender">
@@ -57,6 +62,14 @@
     <def-attr n="det_attr">
       <attr-item tags="def"/>
       <attr-item tags="ind"/>
+    </def-attr>
+    <def-attr n="person">
+      <attr-item tags="p1"/>
+      <attr-item tags="p2"/>
+      <attr-item tags="p3"/>
+    </def-attr>
+    <def-attr n="tense">
+      <attr-item tags="pri"/>
     </def-attr>
   </section-def-attrs>
   <section-def-vars>
@@ -86,6 +99,29 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="itg_verb"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="itg_verb" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="ITGVERB"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="type"/>
+              <clip pos="1" side="tl" part="tense"/>
+              <clip pos="1" side="tl" part="person"/>
+              <clip pos="1" side="tl" part="num"/>
             </lu>
           </chunk>
         </out>
@@ -152,12 +188,20 @@
           <chunk name="det" case="caseFirstWord">
             <tags>
               <tag>
-                <lit-tag v="NOUNPHRASE"/>
+                <lit-tag v="VERBWITHPA"/>
               </tag>
             </tags>
+
             <lu>
-              <clip pos="1" side="tl" part="whole"/>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="type"/>
+              <clip pos="1" side="tl" part="tense"/>
+              <clip pos="1" side="tl" part="person"/>
+              <clip pos="1" side="tl" part="num"/>
             </lu>
+            <!-- <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu> -->
           </chunk>
         </out>
       </action>

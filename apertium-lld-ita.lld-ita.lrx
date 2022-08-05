@@ -23,6 +23,12 @@
     <match tags="n.*"/>
   </rule>
   <rule>
+    <match lemma="da">
+      <select lemma="da" tags="pr"/>
+    </match>
+    <match tags="vblex.*"/>
+  </rule>
+  <rule>
     <match tags="adj.*" />
     <match lemma="tëmp">
       <select lemma="tempo" tags="n.*"/>
