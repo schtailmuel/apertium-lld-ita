@@ -11,7 +11,7 @@
   </rule>
   -->
   <rule>
-    <match lemma="ester" tags="vblex.*">
+    <match lemma="ester" tags="vbser.*">
       <select lemma="essere" tags="vbser.*"/>
     </match>
     <match tags="adj.*"/>
@@ -39,6 +39,12 @@
       <select lemma="lui" tags="prn.*"/>
     </match>
     <match lemma="se" tags="prn.*" />
+  </rule>
+  <rule>
+    <match lemma="al"/>
+    <match lemma="ester" tags="vbser.*">
+      <select lemma="essere" tags="vbser.*"/>
+    </match>
   </rule>
   <rule>
     <match lemma="tëmp">
