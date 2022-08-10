@@ -16585,22 +16585,14 @@
 <l>inciarié<s n="n"/><s n="m"/></l>
 <r>incaricato<s n="n"/><s n="m"/></r>
 </p>
-</e><e>
-<p>
-<l>al<s n="pr"/><s n="det"/><s n="def"/><s n="m"/><s n="sg"/></l>
-<r>addì<s n="adv"/></r>
-</p>
-</e><e>
+</e>
+<e>
 <p>
 <l>al<s n="pr"/><s n="det"/><s n="def"/><s n="m"/><s n="sg"/></l>
 <r>il<s n="det"/><s n="def"/><s n="f"/><s n="sg"/></r>
 </p>
-</e><e>
-<p>
-<l>ai<s n="pr"/><s n="det"/><s n="def"/><s n="m"/><s n="pl"/></l>
-<r>addì<s n="adv"/></r>
-</p>
-</e><e>
+</e>
+<e>
 <p>
 <l>ai<s n="pr"/><s n="det"/><s n="def"/><s n="m"/><s n="pl"/></l>
 <r>il<s n="det"/><s n="def"/><s n="f"/><s n="sg"/></r>
@@ -180970,12 +180962,8 @@
 <l>spizorel<s n="n"/><s n="m"/></l>
 <r>germoglio<s n="n"/><s n="m"/></r>
 </p>
-</e><e>
-<p>
-<l>edl<s n="n"/><s n="m"/></l>
-<r>gemma<s n="n"/><s n="f"/></r>
-</p>
-</e><e>
+</e>
+<e>
 <p>
 <l>edl<s n="n"/><s n="m"/></l>
 <r>occhio<s n="n"/><s n="m"/></r>

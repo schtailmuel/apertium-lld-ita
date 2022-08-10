@@ -14,13 +14,30 @@
     <match lemma="ester" tags="vbser.*">
       <select lemma="essere" tags="vbser.*"/>
     </match>
-    <match tags="adj.*"/>
+    <!-- <match tags="adj.*"/> -->
   </rule>
   <rule>
     <match lemma="de">
       <select lemma="de" tags="pr"/>
     </match>
     <match tags="n.*"/>
+  </rule>
+  <rule>
+    <match lemma="da">
+      <select lemma="di" tags="pr"/>
+    </match>
+    <match lemma="olá"/>
+  </rule>
+  <rule>
+    <match lemma="se">
+      <select lemma="si" tags="prn"/>
+    </match>
+    <match tags="vblex.*"/>
+  </rule>
+  <rule>
+    <match lemma="jí" tags="vblex.*">
+      <select lemma="andare" tags="vblex.*"/>
+    </match>
   </rule>
   <rule>
     <match lemma="da">

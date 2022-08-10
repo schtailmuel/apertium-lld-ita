@@ -13,9 +13,12 @@
     <def-cat n="verb">
       <cat-item tags="vblex.*"/>
       <cat-item tags="vbser.*"/>
+      <cat-item tags="vbhaver.*"/>
     </def-cat>
     <def-cat n="itg_verb">
       <cat-item tags="vblex.*.itg.*"/>
+      <cat-item tags="vbser.*.itg.*"/>
+      <cat-item tags="vbhaver.*.itg.*"/>
     </def-cat>
     <def-cat n="ne_adverb">
       <cat-item lemma="ne" tags="adv"/>
@@ -27,8 +30,19 @@
       <cat-item lemma="al" tags="pr.*"/>
       <cat-item lemma="al" tags="prn.*"/>
     </def-cat>
+    <def-cat n="ai_pr">
+      <cat-item lemma="ai" tags="pr.*"/>
+      <cat-item lemma="ai" tags="prn.*"/>
+    </def-cat>
+    <def-cat n="ara_pr">
+      <cat-item lemma="ara" tags="pr.*"/>
+      <cat-item lemma="ara" tags="prn.*"/>
+    </def-cat>
     <def-cat n="se_prn">
       <cat-item lemma="se" tags="prn.*"/>
+    </def-cat>
+    <def-cat n="i_prn">
+      <cat-item lemma="i" tags="prn.*"/>
     </def-cat>
     <def-cat n="ester_verb">
       <cat-item lemma="ester" tags="vbser.*"/>
@@ -45,6 +59,8 @@
       <attr-item tags="n"/>
       <attr-item tags="adj"/>
       <attr-item tags="vblex"/>
+      <attr-item tags="vbhaver"/>
+      <attr-item tags="vbser"/>
       <attr-item tags="det"/>
     </def-attr>
     <def-attr n="a_cas">
@@ -160,6 +176,37 @@
     </rule>
     <rule>
       <pattern>
+        <pattern-item n="ara_pr"/>
+        <pattern-item n="se_prn"/>
+        <pattern-item n="verb"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="araseverb" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="NOUNPHRASE"/>
+              </tag>
+            </tags>
+            <lu>
+              <lit v="si"/>
+              <lit-tag v="prn"/>
+              <lit-tag v="pro"/>
+              <lit-tag v="ref"/>
+              <lit-tag v="p3"/>
+              <lit-tag v="mf"/>
+              <lit-tag v="sp"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
         <pattern-item n="al_pr"/>
         <pattern-item n="verb"/>
       </pattern>
@@ -180,6 +227,74 @@
     </rule>
     <rule>
       <pattern>
+        <pattern-item n="ai_pr"/>
+        <pattern-item n="verb"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="det" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="NOUNPHRASE"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="type"/>
+              <clip pos="2" side="tl" part="tense"/>
+              <clip pos="2" side="tl" part="person"/>
+              <lit-tag v="pl"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="ara_pr"/>
+        <pattern-item n="verb"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="det" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="NOUNPHRASE"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="i_prn"/>
+        <pattern-item n="verb"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="det" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="NOUNPHRASE"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="type"/>
+              <clip pos="2" side="tl" part="tense"/>
+              <lit-tag v="p1"/>
+              <lit-tag v="sg"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
         <pattern-item n="verb"/>
         <pattern-item n="pa_lemma"/>
       </pattern>
@@ -191,7 +306,6 @@
                 <lit-tag v="VERBWITHPA"/>
               </tag>
             </tags>
-
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="type"/>
