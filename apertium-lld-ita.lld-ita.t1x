@@ -148,6 +148,35 @@
     </rule>
     <rule>
       <pattern>
+        <pattern-item n="i_prn"/>
+        <pattern-item n="ester_verb"/>
+        <pattern-item n="inf_verb"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="iesterppverb" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="I_ESSERE_PARTICIPIO"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="tl" part="type"/>
+              <lit-tag v="pp"/>
+              <lit-tag v="m"/>
+              <clip pos="2" side="tl" part="num"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
         <pattern-item n="ester_verb"/>
         <pattern-item n="inf_verb"/>
       </pattern>
@@ -314,7 +343,7 @@
           <chunk name="det" case="caseFirstWord">
             <tags>
               <tag>
-                <lit-tag v="NOUNPHRASE"/>
+                <lit-tag v="I_VERB"/>
               </tag>
             </tags>
             <lu>
