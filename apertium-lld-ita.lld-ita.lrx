@@ -17,6 +17,12 @@
     <!-- <match tags="adj.*"/> -->
   </rule>
   <rule>
+    <match lemma="tier" tags="n.*">
+      <select lemma="animale" tags="n.*"/>
+    </match>
+    <!-- <match tags="adj.*"/> -->
+  </rule>
+  <rule>
     <match lemma="de">
       <select lemma="de" tags="pr"/>
     </match>
@@ -27,6 +33,12 @@
       <select lemma="di" tags="pr"/>
     </match>
     <match lemma="olá"/>
+  </rule>
+  <rule>
+    <match lemma="da">
+      <select lemma="da" tags="pr"/>
+    </match>
+    <match tags="det.*" />
   </rule>
   <rule>
     <match lemma="se">
