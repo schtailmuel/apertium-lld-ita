@@ -15,6 +15,9 @@
       <cat-item tags="vbser.*"/>
       <cat-item tags="vbhaver.*"/>
     </def-cat>
+    <def-cat n="inf_verb">
+      <cat-item tags="vblex.inf"/>
+    </def-cat>
     <def-cat n="itg_verb">
       <cat-item tags="vblex.*.itg.*"/>
       <cat-item tags="vbser.*.itg.*"/>
@@ -138,6 +141,38 @@
               <clip pos="1" side="tl" part="tense"/>
               <clip pos="1" side="tl" part="person"/>
               <clip pos="1" side="tl" part="num"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="ester_verb"/>
+        <pattern-item n="inf_verb"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="esterppverb" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="ESSERE_PARTICIPIO"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="type"/>
+              <lit-tag v="pp"/>
+              <lit-tag v="m"/>
+              <clip pos="1" side="tl" part="num"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>

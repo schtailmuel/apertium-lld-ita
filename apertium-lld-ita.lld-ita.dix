@@ -126307,17 +126307,8 @@
 <l>vest<s n="adj"/></l>
 <r>ovest<s n="adj"/></r>
 </p>
-</e><e>
-<p>
-<l>sëra<s n="n"/><s n="f"/><s n="sg"/></l>
-<r>ovest<s n="n"/><s n="m"/><s n="sp"/></r>
-</p>
-</e><e>
-<p>
-<l>sëra<s n="n"/><s n="f"/><s n="sg"/></l>
-<r>occidente<s n="n"/><s n="m"/><s n="sp"/></r>
-</p>
-</e><e>
+</e>
+<e>
 <p>
 <l>mufé<s n="vblex"/></l>
 <r>oziare<s n="vblex"/></r>
@@ -134414,8 +134405,8 @@
 </p>
 </e><e>
 <p>
-<l>Plan de Corones<s n="np"/><s n="m"/><s n="sp"/></l>
-<r>Plan de Corones<s n="np"/><s n="m"/><s n="sp"/></r>
+<l>Plan<b/>de<b/>Corones<s n="np"/><s n="m"/><s n="sp"/></l>
+<r>Plan<b/>de<b/>Corones<s n="np"/><s n="m"/><s n="sp"/></r>
 </p>
 </e><e>
 <p>
@@ -151590,8 +151581,8 @@
 </p>
 </e><e>
 <p>
-<l>San Ciascian<s n="np"/><s n="top"/><s n="mf"/><s n="sp"/></l>
-<r>San Cassiano<s n="np"/><s n="mf"/><s n="sp"/></r>
+<l>San<b/>Ciascian<s n="np"/><s n="top"/><s n="mf"/><s n="sp"/></l>
+<r>San<b/>Cassiano<s n="np"/><s n="mf"/><s n="sp"/></r>
 </p>
 </e><e>
 <p>
@@ -188546,8 +188537,8 @@
 </p>
 </e><e>
 <p>
-<l>La Val<s n="np"/><s n="top"/><s n="mf"/><s n="sp"/></l>
-<r>La Valle<s n="np"/><s n="mf"/><s n="sp"/></r>
+<l>La<b/>Val<s n="np"/><s n="top"/><s n="mf"/><s n="sp"/></l>
+<r>La<b/>Valle<s n="np"/><s n="mf"/><s n="sp"/></r>
 </p>
 </e><e>
 <p>
@@ -201591,25 +201582,27 @@
 </p>
 </e><e>
 <p>
-<l>Börz<s n="np"/><s n="m"/><s n="sp"/></l>
+<l>Börz<s n="np"/><s n="top"/><s n="m"/><s n="sp"/></l>
 <r>Passo delle Erbe<s n="np"/><s n="m"/><s n="sp"/></r>
 </p>
 </e><e>
 <p>
-<l>Ju de Börz<s n="np"/><s n="m"/><s n="sp"/></l>
+<l>Furcia<s n="np"/><s n="top"/><s n="m"/><s n="sp"/></l>
+<r>Passo Furcia<s n="np"/><s n="m"/><s n="sp"/></r>
+</p>
+</e><e>
+<p>
+<l>Ju de Börz<s n="np"/><s n="top"/><s n="mf"/><s n="sp"/></l>
 <r>Passo delle Erbe<s n="np"/><s n="m"/><s n="sp"/></r>
 </p>
-</e><e>
+</e>
+<e>
 <p>
-<l>Ju de Furcia<s n="np"/><s n="m"/><s n="sp"/></l>
+<l>Ju de Furcia<s n="np"/><s n="top"/><s n="mf"/><s n="sp"/></l>
 <r>Passo Furcia<s n="np"/><s n="m"/><s n="sp"/></r>
 </p>
-</e><e>
-<p>
-<l>Furcia<s n="np"/><s n="top"/><s n="mf"/><s n="sp"/></l>
-<r>Passo Furcia<s n="np"/><s n="m"/><s n="sp"/></r>
-</p>
-</e><e>
+</e>
+<e>
 <p>
 <l>speditur<s n="n"/><s n="m"/></l>
 <r>speditore<s n="n"/><s n="m"/></r>
@@ -201761,7 +201754,7 @@
 </p>
 </e><e>
 <p>
-<l>Ju de Munt de Crusc<s n="np"/><s n="m"/><s n="sp"/></l>
+<l>Ju de Munt de Crusc<s n="np"/><s n="top"/><s n="mf"/><s n="sp"/></l>
 <r>Passo di Monte Croce di Comelico<s n="np"/><s n="m"/><s n="sp"/></r>
 </p>
 </e><e>
@@ -201781,17 +201774,17 @@
 </p>
 </e><e>
 <p>
-<l>Lech de Lander<s n="np"/><s n="m"/><s n="sp"/></l>
+<l>Lech de Lander<s n="np"/><s n="top"/><s n="mf"/><s n="sp"/></l>
 <r>Lago di Landro<s n="np"/><s n="m"/><s n="sp"/></r>
 </p>
 </e><e>
 <p>
-<l>Lech de Rasun<s n="np"/><s n="m"/><s n="sp"/></l>
+<l>Lech de Rasun<s n="np"/><s n="top"/><s n="mf"/><s n="sp"/></l>
 <r>Lago di Anterselva<s n="np"/><s n="m"/><s n="sp"/></r>
 </p>
 </e><e>
 <p>
-<l>Nöia Todëscia<s n="np"/><s n="f"/><s n="sp"/></l>
+<l>Nöia Todëscia<s n="np"/><s n="top"/><s n="mf"/><s n="sp"/></l>
 <r>Nuova Ponente<s n="np"/><s n="f"/><s n="sp"/></r>
 </p>
 </e><e>
@@ -201821,7 +201814,7 @@
 </p>
 </e><e>
 <p>
-<l>Sant André<s n="np"/><s n="top"/><s n="mf"/><s n="sp"/></l>
+<l>Sant<b/>André<s n="np"/><s n="top"/><s n="mf"/><s n="sp"/></l>
 <r>Sant'Andrea<s n="np"/><s n="mf"/><s n="sp"/></r>
 </p>
 </e><e>
@@ -202068,6 +202061,12 @@
 <p>
 <l>che<b/>fej<b/>me<s n="n"/></l>
 <r>doloroso<s n="adj"/></r>
+</p>
+</e>
+<e>
+<p>
+<l>sön<b/>munt<s n="n"/><s n="f"/><s n="sg"/></l>
+<r>in<b/>montagna<s n="n"/><s n="f"/><s n="sg"/></r>
 </p>
 </e>
 </section>
