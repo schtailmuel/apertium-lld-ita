@@ -17,6 +17,26 @@
     <!-- <match tags="adj.*"/> -->
   </rule>
   <rule>
+    <match lemma="stëra" tags="n.*">
+      <select lemma="stella" tags="n.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="aparí" tags="vblex.*">
+      <select lemma="apparire" tags="vblex.*"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="valch" tags="prn">
+      <select lemma="qualcosa" tags="prn"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="gran" tags="adj.*">
+      <select lemma="grande" tags="adj.*"/>
+    </match>
+  </rule>
+  <rule>
     <match lemma="tier" tags="n.*">
       <select lemma="animale" tags="n.*"/>
     </match>
@@ -76,10 +96,9 @@
     </match>
   </rule>
   <rule>
-    <match lemma="tëmp">
+    <match lemma="tëmp" tags="n.*">
       <select lemma="tempo" tags="n.*"/>
     </match>
-    <match lemma="de" tags="pr.*" />
   </rule>
   <rule>
     <match lemma="de" tags="pr">
