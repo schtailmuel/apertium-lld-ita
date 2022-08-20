@@ -17,6 +17,11 @@
     <!-- <match tags="adj.*"/> -->
   </rule>
   <rule>
+    <match lemma="ciaré" tags="vblex.*">
+      <select lemma="guardare" tags="vblex.*"/>
+    </match>
+  </rule>
+  <rule>
     <match lemma="stëra" tags="n.*">
       <select lemma="stella" tags="n.*"/>
     </match>
@@ -49,6 +54,12 @@
     <match tags="n.*"/>
   </rule>
   <rule>
+    <match lemma="co">
+      <select lemma="come"/>
+    </match>
+    <match tags="vblex.*"/>
+  </rule>
+  <rule>
     <match lemma="da">
       <select lemma="di" tags="pr"/>
     </match>
@@ -58,7 +69,7 @@
     <match lemma="da">
       <select lemma="da" tags="pr"/>
     </match>
-    <match tags="det.*" />
+    <!-- <match tags="det.*" /> -->
   </rule>
   <rule>
     <match lemma="se">

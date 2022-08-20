@@ -183017,8 +183017,8 @@
 </p>
 </e><e>
 <p>
-<l>Gran Bretagna<s n="np"/><s n="f"/><s n="sp"/></l>
-<r>Gran Bretagna<s n="np"/><s n="f"/><s n="sp"/></r>
+<l>Gran Bretagna<s n="np"/><s n="top"/><s n="f"/><s n="sp"/></l>
+<r>Gran Bretagna<s n="np"/><s n="top"/><s n="f"/><s n="sp"/></r>
 </p>
 </e><e>
 <p>
@@ -198852,18 +198852,18 @@
 </p>
 </e><e>
 <p>
-<l>Val de Türesc<s n="np"/><s n="f"/><s n="sp"/></l>
-<r>Valle Aurina<s n="np"/><s n="f"/><s n="sp"/></r>
+<l>Val de Türesc<s n="np"/><s n="top"/><s n="f"/><s n="sp"/></l>
+<r>Valle Aurina<s n="np"/><s n="top"/><s n="f"/><s n="sp"/></r>
 </p>
 </e><e>
 <p>
-<l>Aurin<s n="np"/><s n="m"/><s n="sp"/></l>
-<r>Valle Aurina<s n="np"/><s n="f"/><s n="sp"/></r>
+<l>Aurin<s n="np"/><s n="top"/><s n="m"/><s n="sp"/></l>
+<r>Valle Aurina<s n="np"/><s n="top"/><s n="f"/><s n="sp"/></r>
 </p>
 </e><e>
 <p>
-<l>Val dl Isarch<s n="np"/><s n="f"/><s n="sp"/></l>
-<r>Valle Isarco<s n="np"/><s n="f"/><s n="sp"/></r>
+<l>Val dl Isarch<s n="np"/><s n="top"/><s n="f"/><s n="sp"/></l>
+<r>Valle Isarco<s n="np"/><s n="top"/><s n="f"/><s n="sp"/></r>
 </p>
 </e><e>
 <p>
@@ -200962,7 +200962,7 @@
 </p>
 </e><e>
 <p>
-<l>Ciüria Cöcena<s n="np"/><s n="f"/><s n="sp"/></l>
+<l>Ciüria Cöcena<s n="np"/><s n="f"/><s n="sg"/></l>
 <r>Cappuccetto Rosso<s n="np"/><s n="mf"/><s n="sp"/></r>
 </p>
 </e><e>
@@ -202063,6 +202063,12 @@
 <p>
 <l>sö<b/>por<b/>munt<s n="n"/><s n="f"/><s n="sg"/></l>
 <r>in<b/>montagna<s n="n"/><s n="f"/><s n="sg"/></r>
+</p>
+</e>
+<e>
+<p>
+<l>tres<b/>indô<s n="loc"/><s n="adv"/></l>
+<r>ripetutamente<s n="loc"/><s n="adv"/></r>
 </p>
 </e>
 </section>

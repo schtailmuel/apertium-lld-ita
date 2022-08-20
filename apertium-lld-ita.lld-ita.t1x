@@ -53,6 +53,12 @@
     <def-cat n="pa_lemma">
       <cat-item lemma="pe" tags="n.*"/>
     </def-cat>
+    <def-cat n="me_lemma">
+      <cat-item lemma="me" tags="*"/>
+    </def-cat>
+    <def-cat n="sö_lemma">
+      <cat-item lemma="sö" tags="*"/>
+    </def-cat>
     <def-cat n="adjective">
       <cat-item tags="adj.*"/>
     </def-cat>
@@ -240,6 +246,53 @@
     </rule>
     <rule>
       <pattern>
+        <pattern-item n="al_pr"/>
+        <pattern-item n="me_lemma"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="alme" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="NOUNPHRASE"/>
+              </tag>
+            </tags>
+            <lu>
+              <lit v="mi"/>
+              <lit-tag v="prn"/>
+              <lit-tag v="pro"/>
+              <lit-tag v="p1"/>
+              <lit-tag v="mf"/>
+              <lit-tag v="sp"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="se_prn"/>
+        <pattern-item n="inf_verb"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="severb" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="NOUNPHRASE"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="type"/>
+              <lit-tag v="inf"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
         <pattern-item n="ara_pr"/>
         <pattern-item n="se_prn"/>
         <pattern-item n="verb"/>
@@ -284,6 +337,26 @@
             </tags>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="verb"/>
+        <pattern-item n="sö_lemma"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="det" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="VERB+SÖ"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
@@ -404,6 +477,11 @@
             <b/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <lit v="niente"/>
+              <lit-tag v="adv"/>
             </lu>
           </chunk>
         </out>
