@@ -205,10 +205,6 @@
               <lit-tag v="m"/>
               <clip pos="1" side="tl" part="num"/>
             </lu>
-            <b/>
-            <lu>
-              <clip pos="3" side="tl" part="whole"/>
-            </lu>
           </chunk>
         </out>
       </action>
