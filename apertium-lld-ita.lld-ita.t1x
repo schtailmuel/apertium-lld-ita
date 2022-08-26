@@ -95,6 +95,11 @@
     </def-attr>
     <def-attr n="tense">
       <attr-item tags="pri"/>
+      <attr-item tags="inf"/>
+      <attr-item tags="pii"/>
+      <attr-item tags="pp"/>
+      <attr-item tags="fti"/>
+      <attr-item tags="cni"/>
     </def-attr>
   </section-def-attrs>
   <section-def-vars>
@@ -110,6 +115,30 @@
     </def-macro>
   </section-def-macros>
   <section-rules>
+    <rule>
+      <pattern>
+        <pattern-item n="verb"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="sent">
+            <tags>
+              <tag>
+                <lit-tag v="VERB"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="type"/>
+              <clip pos="1" side="tl" part="tense"/>
+              <clip pos="1" side="tl" part="person"/>
+              <clip pos="1" side="tl" part="num"/>
+              <clip pos="1" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="REGLA: SENT">
       <pattern>
         <pattern-item n="sent"/>
@@ -332,7 +361,12 @@
               </tag>
             </tags>
             <lu>
-              <clip pos="2" side="tl" part="whole"/>
+              <clip pos="2" side="tl" part="lemh"/>
+              <clip pos="2" side="tl" part="type"/>
+              <clip pos="2" side="tl" part="tense"/>
+              <clip pos="2" side="tl" part="person"/>
+              <clip pos="2" side="tl" part="num"/>
+              <clip pos="2" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
