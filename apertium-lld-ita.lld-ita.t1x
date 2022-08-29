@@ -15,6 +15,9 @@
       <cat-item tags="vbser.*"/>
       <cat-item tags="vbhaver.*"/>
     </def-cat>
+    <def-cat n="avere">
+      <cat-item tags="vbhaver.*"/>
+    </def-cat>
     <def-cat n="inf_verb">
       <cat-item tags="vblex.inf"/>
     </def-cat>
@@ -22,6 +25,9 @@
       <cat-item tags="vblex.*.itg.*"/>
       <cat-item tags="vbser.*.itg.*"/>
       <cat-item tags="vbhaver.*.itg.*"/>
+    </def-cat>
+    <def-cat n="apos">
+      <cat-item tags="apos"/>
     </def-cat>
     <def-cat n="ne_adverb">
       <cat-item lemma="ne" tags="adv"/>
@@ -58,6 +64,9 @@
     </def-cat>
     <def-cat n="sö_lemma">
       <cat-item lemma="sö" tags="*"/>
+    </def-cat>
+    <def-cat n="s_lemma">
+      <cat-item lemma="s" tags="*"/>
     </def-cat>
     <def-cat n="adjective">
       <cat-item tags="adj.*"/>
@@ -153,6 +162,31 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="s_lemma"/>
+        <pattern-item n="apos"/>
+        <pattern-item n="avere"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="s_apos_avere">
+            <tags>
+              <tag>
+                <lit-tag v="SAPOS"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>

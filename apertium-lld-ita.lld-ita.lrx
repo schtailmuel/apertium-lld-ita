@@ -27,6 +27,11 @@
     </match>
   </rule>
   <rule>
+    <match lemma="mëte" tags="vblex.*">
+      <select lemma="mettere" tags="vblex.*"/>
+    </match>
+  </rule>
+  <rule>
     <match lemma="aparí" tags="vblex.*">
       <select lemma="apparire" tags="vblex.*"/>
     </match>
@@ -99,6 +104,16 @@
       <select lemma="lui" tags="prn.*"/>
     </match>
     <match lemma="se" tags="prn.*" />
+  </rule>
+  <rule>
+    <match lemma="löm">
+      <select lemma="luce" />
+    </match>
+  </rule>
+  <rule>
+    <match lemma="gní" tags="vblex.*">
+      <select lemma="venire" tags="vblex.*" />
+    </match>
   </rule>
   <rule>
     <match lemma="al"/>
