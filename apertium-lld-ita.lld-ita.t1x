@@ -10,6 +10,9 @@
     <def-cat n="noun">
       <cat-item tags="n.*"/>
     </def-cat>
+    <def-cat n="numer">
+      <cat-item tags="num"/>
+    </def-cat>
     <def-cat n="verb">
       <cat-item tags="vblex.*"/>
       <cat-item tags="vbser.*"/>
@@ -141,6 +144,7 @@
               <clip pos="1" side="tl" part="type"/>
               <clip pos="1" side="tl" part="tense"/>
               <clip pos="1" side="tl" part="person"/>
+              <clip pos="1" side="tl" part="gender"/>
               <clip pos="1" side="tl" part="num"/>
               <clip pos="1" side="tl" part="lemq"/>
             </lu>
@@ -421,6 +425,34 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="ai_pr"/>
+        <pattern-item n="numer"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="det" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="DATE"/>
+              </tag>
+            </tags>
+            <lu>
+              <lit v="il"/>
+              <lit-tag v="det"/>
+              <lit-tag v="def"/>
+              <lit-tag v="m"/>
+              <lit-tag v="sg"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
