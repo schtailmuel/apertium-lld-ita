@@ -17,6 +17,11 @@
     <!-- <match tags="adj.*"/> -->
   </rule>
   <rule>
+    <match lemma="por">
+      <select lemma="per"/>
+    </match>
+  </rule>
+  <rule>
     <match lemma="ciaré" tags="vblex.*">
       <select lemma="guardare" tags="vblex.*"/>
     </match>

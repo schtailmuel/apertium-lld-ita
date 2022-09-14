@@ -38,6 +38,9 @@
     <def-cat n="nia_adverb">
       <cat-item lemma="nia" tags="adv"/>
     </def-cat>
+    <def-cat n="ma_adverb">
+      <cat-item lemma="ma" tags="adv"/>
+    </def-cat>
     <def-cat n="al_pr">
       <cat-item lemma="al" tags="pr.*"/>
       <cat-item lemma="al" tags="prn.*"/>
@@ -558,6 +561,7 @@
         <pattern-item n="ne_adverb"/>
         <pattern-item n="verb"/>
         <pattern-item n="nia_adverb"/>
+        <pattern-item n="ma_adverb"/>
       </pattern>
       <action>
         <out>
@@ -568,7 +572,8 @@
               </tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="whole"/>
+              <lit v="non"/>
+              <lit-tag v="adv"/>
             </lu>
             <b/>
             <lu>
@@ -576,8 +581,34 @@
             </lu>
             <b/>
             <lu>
-              <lit v="niente"/>
+              <lit v="solo"/>
               <lit-tag v="adv"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="ne_adverb"/>
+        <pattern-item n="verb"/>
+        <pattern-item n="nia_adverb"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="det" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="NOUNPHRASE"/>
+              </tag>
+            </tags>
+            <lu>
+              <lit v="non"/>
+              <lit-tag v="adv"/>
+            </lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
