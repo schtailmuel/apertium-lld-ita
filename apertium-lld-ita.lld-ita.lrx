@@ -22,6 +22,11 @@
     </match>
   </rule>
   <rule>
+    <match lemma="me">
+      <select lemma="mi"/>
+    </match>
+  </rule>
+  <rule>
     <match lemma="ciaré" tags="vblex.*">
       <select lemma="guardare" tags="vblex.*"/>
     </match>

@@ -15,7 +15,15 @@
     </def-cat>
     <def-cat n="verb">
       <cat-item tags="vblex.*"/>
-      <cat-item tags="vbser.*"/>
+      <cat-item tags="vbser.pri.p*"/>
+      <cat-item tags="vbser.pii.p*"/>
+      <cat-item tags="vbser.fti.p*"/>
+      <cat-item tags="vbser.inf"/>
+      <cat-item tags="vbser.imp.*"/>
+      <cat-item tags="vbser.cni.p*"/>
+      <cat-item tags="vbser"/>
+      <cat-item tags="vbser.ger"/>
+      <cat-item tags="vbser.pp*"/>
       <cat-item tags="vbhaver.*"/>
     </def-cat>
     <def-cat n="avere">
@@ -49,9 +57,9 @@
       <cat-item lemma="ai" tags="pr.*"/>
       <cat-item lemma="ai" tags="prn.*"/>
     </def-cat>
-    <def-cat n="ara_pr">
-      <cat-item lemma="ara" tags="pr.*"/>
-      <cat-item lemma="ara" tags="prn.*"/>
+    <def-cat n="ara">
+      <cat-item lemma="ara" tags="*" />
+      <cat-item lemma="aré" tags="vblex.*" />
     </def-cat>
     <def-cat n="se_prn">
       <cat-item lemma="se" tags="prn.*"/>
@@ -61,6 +69,9 @@
     </def-cat>
     <def-cat n="ester_verb">
       <cat-item lemma="ester" tags="vbser.*"/>
+    </def-cat>
+    <def-cat n="ester_verb_itg">
+      <cat-item lemma="ester" tags="vbser.pri.itg.*"/>
     </def-cat>
     <def-cat n="pa_lemma">
       <cat-item lemma="pe" tags="n.*"/>
@@ -115,6 +126,7 @@
       <attr-item tags="pp"/>
       <attr-item tags="fti"/>
       <attr-item tags="cni"/>
+      <attr-item tags="ger"/>
     </def-attr>
   </section-def-attrs>
   <section-def-vars>
@@ -359,7 +371,7 @@
     </rule>
     <rule>
       <pattern>
-        <pattern-item n="ara_pr"/>
+        <pattern-item n="ara"/>
         <pattern-item n="se_prn"/>
         <pattern-item n="verb"/>
       </pattern>
@@ -487,7 +499,30 @@
     </rule>
     <rule>
       <pattern>
-        <pattern-item n="ara_pr"/>
+        <pattern-item n="ester_verb_itg"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="det" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="ESTER_ITG"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="type"/>
+              <clip pos="2" side="tl" part="tense"/>
+              <clip pos="2" side="tl" part="person"/>
+              <clip pos="2" side="tl" part="num"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="ara"/>
         <pattern-item n="verb"/>
       </pattern>
       <action>
