@@ -11,6 +11,17 @@
   </rule>
   -->
   <rule>
+    <match lemma="nü">
+      <select lemma="nuovo"/>
+    </match>
+  </rule>
+  <rule>
+    <match lemma="nü">
+      <select lemma="nove"/>
+    </match>
+    <match tags="n.*"/>
+  </rule>
+  <rule>
     <match lemma="ester" tags="vbser.*">
       <select lemma="essere" tags="vbser.*"/>
     </match>
