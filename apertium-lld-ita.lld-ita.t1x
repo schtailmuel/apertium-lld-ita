@@ -13,6 +13,11 @@
     <def-cat n="numer">
       <cat-item tags="num"/>
     </def-cat>
+    <def-cat n="itg_verb">
+      <cat-item tags="vblex.*.itg.*"/>
+      <cat-item tags="vbser.*.itg.*"/>
+      <cat-item tags="vbhaver.*.itg.*"/>
+    </def-cat>
     <def-cat n="verb">
       <cat-item tags="vblex.*"/>
       <cat-item tags="vbser.pri.p*"/>
@@ -31,11 +36,6 @@
     </def-cat>
     <def-cat n="inf_verb">
       <cat-item tags="vblex.inf"/>
-    </def-cat>
-    <def-cat n="itg_verb">
-      <cat-item tags="vblex.*.itg.*"/>
-      <cat-item tags="vbser.*.itg.*"/>
-      <cat-item tags="vbhaver.*.itg.*"/>
     </def-cat>
     <def-cat n="apos">
       <cat-item tags="apos"/>
@@ -142,31 +142,6 @@
     </def-macro>
   </section-def-macros>
   <section-rules>
-    <rule>
-      <pattern>
-        <pattern-item n="verb"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk name="sent">
-            <tags>
-              <tag>
-                <lit-tag v="VERB"/>
-              </tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="lemh"/>
-              <clip pos="1" side="tl" part="type"/>
-              <clip pos="1" side="tl" part="tense"/>
-              <clip pos="1" side="tl" part="person"/>
-              <clip pos="1" side="tl" part="gender"/>
-              <clip pos="1" side="tl" part="num"/>
-              <clip pos="1" side="tl" part="lemq"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
     <rule comment="REGLA: SENT">
       <pattern>
         <pattern-item n="sent"/>
@@ -229,6 +204,31 @@
               <clip pos="1" side="tl" part="tense"/>
               <clip pos="1" side="tl" part="person"/>
               <clip pos="1" side="tl" part="num"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="verb"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="sent">
+            <tags>
+              <tag>
+                <lit-tag v="VERB"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="type"/>
+              <clip pos="1" side="tl" part="tense"/>
+              <clip pos="1" side="tl" part="person"/>
+              <clip pos="1" side="tl" part="gender"/>
+              <clip pos="1" side="tl" part="num"/>
+              <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
