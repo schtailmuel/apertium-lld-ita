@@ -109,6 +109,7 @@
     <def-attr n="gender">
       <attr-item tags="m"/>
       <attr-item tags="f"/>
+      <attr-item tags="mf"/>
     </def-attr>
     <def-attr n="det_attr">
       <attr-item tags="def"/>
