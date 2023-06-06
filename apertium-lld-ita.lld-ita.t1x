@@ -24,8 +24,15 @@
     <def-cat n="avere">
       <cat-item tags="vbhaver.*"/>
     </def-cat>
+    <def-cat n="verb_inf">
+      <cat-item tags="vblex.inf"/>
+    </def-cat>
     <def-cat n="al_prn_pers">
       <cat-item lemma="al" tags="prn.pers.*"/>
+    </def-cat>
+    <def-cat n="se_prn_pers">
+      <cat-item lemma="se" tags="prn.pers.*"/>
+      <cat-item lemma="se" tags="prn.pers"/>
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
@@ -143,6 +150,36 @@
               <clip pos="1" side="tl" part="tense"/>
               <clip pos="1" side="tl" part="person"/>
               <clip pos="1" side="tl" part="num"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="se_prn_pers"/>
+        <pattern-item n="verb_inf"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="se+verb" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="SE+VERB"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="type"/>
+              <clip pos="2" side="tl" part="tense"/>
+              <lit v="+"/>
+              <lit v="si"/>
+              <lit-tag v="prn"/>
+              <lit-tag v="enc"/>
+              <lit-tag v="ref"/>
+              <lit-tag v="p3"/>
+              <lit-tag v="mf"/>
+              <lit-tag v="sp"/>
             </lu>
           </chunk>
         </out>
