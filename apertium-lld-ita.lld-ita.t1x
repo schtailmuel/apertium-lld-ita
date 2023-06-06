@@ -18,75 +18,14 @@
       <cat-item tags="vbser.*.itg.*"/>
       <cat-item tags="vbhaver.*.itg.*"/>
     </def-cat>
-    <def-cat n="verb">
-      <cat-item tags="vblex.*"/>
-      <cat-item tags="vbser.pri.p*"/>
-      <cat-item tags="vbser.pii.p*"/>
-      <cat-item tags="vbser.fti.p*"/>
-      <cat-item tags="vbser.inf"/>
-      <cat-item tags="vbser.imp.*"/>
-      <cat-item tags="vbser.cni.p*"/>
-      <cat-item tags="vbser"/>
-      <cat-item tags="vbser.ger"/>
-      <cat-item tags="vbser.pp*"/>
-      <cat-item tags="vbhaver.*"/>
+    <def-cat n="essere">
+      <cat-item tags="vbser.*"/>
     </def-cat>
     <def-cat n="avere">
       <cat-item tags="vbhaver.*"/>
     </def-cat>
-    <def-cat n="inf_verb">
-      <cat-item tags="vblex.inf"/>
-    </def-cat>
-    <def-cat n="apos">
-      <cat-item tags="apos"/>
-    </def-cat>
-    <def-cat n="ne_adverb">
-      <cat-item lemma="ne" tags="adv"/>
-    </def-cat>
-    <def-cat n="nia_adverb">
-      <cat-item lemma="nia" tags="adv"/>
-    </def-cat>
-    <def-cat n="ma_adverb">
-      <cat-item lemma="ma" tags="adv"/>
-    </def-cat>
-    <def-cat n="al_pr">
-      <cat-item lemma="al" tags="pr.*"/>
-      <cat-item lemma="al" tags="prn.*"/>
-    </def-cat>
-    <def-cat n="ai_pr">
-      <cat-item lemma="ai" tags="pr.*"/>
-      <cat-item lemma="ai" tags="prn.*"/>
-    </def-cat>
-    <def-cat n="ara">
-      <cat-item lemma="ara" tags="*" />
-      <cat-item lemma="aré" tags="vblex.*" />
-    </def-cat>
-    <def-cat n="se_prn">
-      <cat-item lemma="se" tags="prn.*"/>
-    </def-cat>
-    <def-cat n="i_prn">
-      <cat-item lemma="i" tags="prn.*"/>
-    </def-cat>
-    <def-cat n="ester_verb">
-      <cat-item lemma="ester" tags="vbser.*"/>
-    </def-cat>
-    <def-cat n="ester_verb_itg">
-      <cat-item lemma="ester" tags="vbser.pri.itg.*"/>
-    </def-cat>
-    <def-cat n="pa_lemma">
-      <cat-item lemma="pe" tags="n.*"/>
-    </def-cat>
-    <def-cat n="me_lemma">
-      <cat-item lemma="me" tags="*"/>
-    </def-cat>
-    <def-cat n="sö_lemma">
-      <cat-item lemma="sö" tags="*"/>
-    </def-cat>
-    <def-cat n="s_lemma">
-      <cat-item lemma="s" tags="*"/>
-    </def-cat>
-    <def-cat n="adjective">
-      <cat-item tags="adj.*"/>
+    <def-cat n="al_prn_pers">
+      <cat-item lemma="al" tags="prn.pers.*"/>
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
@@ -157,6 +96,53 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="al_prn_pers"/>
+        <pattern-item n="essere"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="alé" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="NOUNPHRASE"/>
+              </tag>
+            </tags>
+            <lu>
+              <lit v="essere"/>
+              <lit-tag v="vbser"/>
+              <lit-tag v="pri"/>
+              <lit-tag v="p3"/>
+              <lit-tag v="sg"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="itg_verb"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="itg_verb" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="ITGVERB"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="type"/>
+              <clip pos="1" side="tl" part="tense"/>
+              <clip pos="1" side="tl" part="person"/>
+              <clip pos="1" side="tl" part="num"/>
             </lu>
           </chunk>
         </out>
