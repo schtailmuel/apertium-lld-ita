@@ -33,6 +33,10 @@
     <def-cat n="verb_inf">
       <cat-item tags="vblex.inf"/>
     </def-cat>
+    <def-cat n="prn_pers">
+      <cat-item tags="prn.pers.*"/>
+      <cat-item tags="prn.pers"/>
+    </def-cat>
     <def-cat n="al_prn_pers">
       <cat-item lemma="al" tags="prn.pers.*"/>
     </def-cat>
@@ -43,6 +47,13 @@
     <def-cat n="te_prn_pers">
       <cat-item lemma="te" tags="prn.pers.*"/>
       <cat-item lemma="te" tags="prn.pers"/>
+    </def-cat>
+    <def-cat n="ti_prn_pers">
+      <cat-item lemma="ti" tags="prn.pers.*"/>
+      <cat-item lemma="ti" tags="prn.pers"/>
+    </def-cat>
+    <def-cat n="i_prn_pers">
+      <cat-item lemma="i" tags="prn.pers"/>
     </def-cat>
     <def-cat n="pa">
       <cat-item lemma="pa" tags="ij"/>
@@ -222,6 +233,46 @@
               <lit-tag v="p2"/>
               <lit-tag v="mf"/>
               <lit-tag v="sg"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="ti_prn_pers"/>
+        <pattern-item n="verb_inf"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="ti+verb_inf" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="TI+VERB_INF"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="i_prn_pers"/>
+        <pattern-item n="prn_pers"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="i+prn_pers" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="I+PRN_PERS"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
