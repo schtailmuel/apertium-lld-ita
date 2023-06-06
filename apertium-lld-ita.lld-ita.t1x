@@ -15,8 +15,11 @@
     </def-cat>
     <def-cat n="itg_verb">
       <cat-item tags="vblex.*.itg.*"/>
+      <cat-item tags="vblex.*.itg"/>
       <cat-item tags="vbser.*.itg.*"/>
+      <cat-item tags="vbser.*.itg"/>
       <cat-item tags="vbhaver.*.itg.*"/>
+      <cat-item tags="vbhaver.*.itg"/>
     </def-cat>
     <def-cat n="essere">
       <cat-item tags="vbser.*"/>
@@ -36,6 +39,10 @@
     <def-cat n="se_prn_pers">
       <cat-item lemma="se" tags="prn.pers.*"/>
       <cat-item lemma="se" tags="prn.pers"/>
+    </def-cat>
+    <def-cat n="te_prn_pers">
+      <cat-item lemma="te" tags="prn.pers.*"/>
+      <cat-item lemma="te" tags="prn.pers"/>
     </def-cat>
     <def-cat n="pa">
       <cat-item lemma="pa" tags="ij"/>
@@ -186,6 +193,35 @@
               <lit-tag v="p3"/>
               <lit-tag v="mf"/>
               <lit-tag v="sp"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="te_prn_pers"/>
+        <pattern-item n="verb_inf"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="te+verb" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="TE+VERB"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="type"/>
+              <clip pos="2" side="tl" part="tense"/>
+              <lit v="+"/>
+              <lit v="ti"/>
+              <lit-tag v="prn"/>
+              <lit-tag v="enc"/>
+              <lit-tag v="p2"/>
+              <lit-tag v="mf"/>
+              <lit-tag v="sg"/>
             </lu>
           </chunk>
         </out>
