@@ -4,6 +4,9 @@
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
+    <def-cat n="apos">
+      <cat-item tags="apos"/>
+    </def-cat>
     <def-cat n="det">
       <cat-item tags="det.*"/>
     </def-cat>
@@ -57,6 +60,16 @@
     </def-cat>
     <def-cat n="pa">
       <cat-item lemma="pa" tags="ij"/>
+    </def-cat>
+    <def-cat n="m_apos">
+      <cat-item lemma="m" tags="prn.*"/>
+      <cat-item lemma="me" tags="prn.*"/>
+    </def-cat>
+    <def-cat n="t_apos">
+      <cat-item lemma="te" tags="prn.*"/>
+    </def-cat>
+    <def-cat n="s_apos">
+      <cat-item lemma="se" tags="prn.*"/>
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
@@ -176,6 +189,87 @@
               <clip pos="1" side="tl" part="num"/>
             </lu>
           </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="i_prn_pers"/>
+        <pattern-item n="m_apos"/>
+        <pattern-item n="apos"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="m+apos" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="M+APOS"/>
+              </tag>
+            </tags>
+            <lu>
+              <lit v="mi"/>
+              <lit-tag v="prn"/>
+              <lit-tag v="pro"/>
+              <lit-tag v="p1"/>
+              <lit-tag v="mf"/>
+              <lit-tag v="sg"/>
+            </lu>
+          </chunk>
+          <b/>  
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="i_prn_pers"/>
+        <pattern-item n="t_apos"/>
+        <pattern-item n="apos"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="t+apos" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="T+APOS"/>
+              </tag>
+            </tags>
+            <lu>
+              <lit v="ti"/>
+              <lit-tag v="prn"/>
+              <lit-tag v="pro"/>
+              <lit-tag v="p2"/>
+              <lit-tag v="mf"/>
+              <lit-tag v="sg"/>
+            </lu>
+          </chunk>
+          <b/>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="i_prn_pers"/>
+        <pattern-item n="s_apos"/>
+        <pattern-item n="apos"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="s+apos" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="S+APOS"/>
+              </tag>
+            </tags>
+            <lu>
+              <lit v="vi"/>
+              <lit-tag v="prn"/>
+              <lit-tag v="pro"/>
+              <lit-tag v="p2"/>
+              <lit-tag v="mf"/>
+              <lit-tag v="pl"/>
+            </lu>
+          </chunk>
+          <b/>
         </out>
       </action>
     </rule>
