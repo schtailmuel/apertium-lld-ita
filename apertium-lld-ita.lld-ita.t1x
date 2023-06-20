@@ -47,6 +47,10 @@
       <cat-item lemma="se" tags="prn.pers.*"/>
       <cat-item lemma="se" tags="prn.pers"/>
     </def-cat>
+    <def-cat n="me_prn_pers">
+      <cat-item lemma="me" tags="prn.pers.*"/>
+      <cat-item lemma="me" tags="prn.pers"/>
+    </def-cat>
     <def-cat n="te_prn_pers">
       <cat-item lemma="te" tags="prn.pers.*"/>
       <cat-item lemma="te" tags="prn.pers"/>
@@ -298,6 +302,35 @@
               <lit-tag v="p3"/>
               <lit-tag v="mf"/>
               <lit-tag v="sp"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="me_prn_pers"/>
+        <pattern-item n="verb_inf"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="me+verb" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="ME+VERB"/>
+              </tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="type"/>
+              <clip pos="2" side="tl" part="tense"/>
+              <lit v="+"/>
+              <lit v="mi"/>
+              <lit-tag v="prn"/>
+              <lit-tag v="enc"/>
+              <lit-tag v="p1"/>
+              <lit-tag v="mf"/>
+              <lit-tag v="sg"/>
             </lu>
           </chunk>
         </out>
