@@ -41,6 +41,10 @@
     <def-cat n="verb">
       <cat-item tags="vblex.*"/>
     </def-cat>
+    <def-cat n="verb_be_have">
+      <cat-item tags="vbhaver.*"/>
+      <cat-item tags="vbser.*"/>
+    </def-cat>
     <def-cat n="verb_inf">
       <cat-item tags="vblex.inf"/>
     </def-cat>
@@ -431,6 +435,32 @@
             </tags>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule>
+      <pattern>
+        <pattern-item n="noun"/>
+        <pattern-item n="verb_be_have"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="adapt-gender" case="caseFirstWord">
+            <tags>
+              <tag>
+                <lit-tag v="ADAPT_GENDER"/>
+              </tag>
+            </tags>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+            <b/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="type"/>
+              <clip pos="2" side="tl" part="tense"/>
+              <clip pos="2" side="tl" part="person"/>
+              <clip pos="1" side="tl" part="num"/>
             </lu>
           </chunk>
         </out>
