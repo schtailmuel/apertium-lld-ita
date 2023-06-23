@@ -24,7 +24,7 @@
       <cat-item tags="vbhaver.*.itg.*"/>
       <cat-item tags="vbhaver.*.itg"/>
     </def-cat>
-    <def-cat n="pri_itg_verb">
+    <def-cat n="pii_itg_verb">
       <cat-item tags="vblex.pii.*.itg.*"/>
       <cat-item tags="vblex.pii.*.itg"/>
       <cat-item tags="vbser.pii.*.itg.*"/>
